@@ -1,7 +1,7 @@
 XPMA (eXtensive Process Modelling and Automation)
 =================================================
 
-*Exchange tedious work for computer force!*\
+*Exchange tedious work for computer force!*
 
 A rough description of the idea follows. First you can read the structured variant (TL;DR) and then "THE LONG STORY" written in a marketing-like way.
 
@@ -49,7 +49,7 @@ general examples:
 * rapid prototyping
 * documentation
 
-Expected time for development in one person (full-time): 2 years for a very basic version. 5 years for advanced modules, pre-prepared processes, connectors etc.
+Expected time for development in one person (full-time): 2 years for a very basic version. 3 years more for advanced modules, pre-prepared processes, connectors etc.
 
 THE LONG STORY
 --------------
