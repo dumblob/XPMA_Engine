@@ -5,8 +5,8 @@ XPMA (eXtensive Process Modelling and Automation)
 
 A rough description of the idea follows. First you can read the structured variant (TL;DR) and then "THE LONG STORY" written in a marketing-like way.
 
-TL;DR (the structured variant)
-------------------------------
+TL;DR (a structured description)
+----------------------------------
 
 We aim to create a theoretical background (and implement it) for automation of processes. The rough idea is to take a high-level process description language (BPMN 2.0, WSFS, BPEL4WS, XPDL etc.), extend it if utterly needed (I'd like create a theoretical background for reasoning "why it's not needed to extend the existing chosen language" with discussion of possible solutions for treatment of cases which can't be covered by the language) and from a descriptions in this language generate a fully working system performing the modeled tasks.
 
@@ -51,8 +51,8 @@ general examples:
 
 Expected time for development in one person (full-time): 2 years for a very basic version. 3 years more for advanced modules, pre-prepared processes, connectors etc.
 
-THE LONG STORY
---------------
+THE LONG STORY (a marketing description)
+----------------------------------------
 
 In the lines below, I'm describing my idea for thesis and/or future development and especially practical deployment.
 
