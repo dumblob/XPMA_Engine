@@ -19,7 +19,7 @@ reasons:
 
 arguments:
 * no existing tool nowadays (neither IBM BPM nor jBPM nor Bonita nor Bizagi suite does it - those are only UIs for fill-in forms, but they don't offer auto-generation of DB, easy upgrade of processes, deployment on different places/technologies, no other input/output - just web interface which is good only for forms and visualization, nothing advanced like custom programmed logic)
-Actually, Bizagi is the only one closer to my idea, but it's still too little automated and has various constraints (UI, their own engine, connectors too specific but non-parametrizable and platform-dependent tools, getting bloated, etc.). In other words, Bizagi supports only a subset of business processes. My idea, if realized, is usable also for non-business processes. By the way, Bizagi made a huge leap in 2014 - before, it wasn't even close to my idea.
+Actually, Bizagi is the only one closer to our idea, but it's still too little automated and has various constraints (UI, their own engine, connectors too specific but non-parametrizable and platform-dependent tools, getting bloated, etc.). In other words, Bizagi supports only a subset of business processes. Our idea, if realized, is usable also for non-business processes. By the way, Bizagi made a huge leap in 2014 - before, it wasn't even close to our idea.
 * easy update and maintainability
 * easy extending and exchange of backends and frontends
 * easy connection to existing systems with "remote interfaces"
@@ -28,7 +28,7 @@ Actually, Bizagi is the only one closer to my idea, but it's still too little au
 * easy to create the model as ordinary users intuitively understand processes (compared to data models, transactions, objects, routines and all other IT stuff)
 * easy to monitor anything in the system
 * easy to accurately estimate costs and risks of any part of the system
-* there is an utter need for different levels of process abstraction (my idea is feasible for all levels including primary, supporting and organizational processes)
+* there is an utter need for different levels of process abstraction (our idea is feasible for all levels including primary, supporting and organizational processes)
 * Google currently very much promotes the "small scripts" approach with it's own "Google Apps Script". It's extremely limited, but it's growing popularity shows, that there is a huge number of people/groups which need automation of processes (the Google Apps Script is most often used with Google Docs for connecting all of them and also e.g. for producing animated charts).
 * growing need for a *flipped approach* - people creating value have to be creative and tell what they want/need instead of just obeying commands and getting used to inappropriate IT tools and processes
 
@@ -41,6 +41,7 @@ technical remarks:
 * scalability - the resulting systems will not use "engine", but will be stand-alone distributed and parallelized applications
 * built with soft real-time messaging (e.g. collaboration) in mind (in the models themself and in the resulting system as well)
 * later on there could be added some auto-inferable parts of SW process improvement
+* use of "remote interfaces" provided by other SaaS/PaaS systems in models allow tight and extremely quick integration
 
 general examples:
 * information systems (both small and huge ones); e.g. administrative tasks
@@ -57,7 +58,7 @@ THE LONG STORY (a marketing description)
 
 In the following lines, we're describing an idea for a thesis and/or future development and especially practical deployment.
 
-The ultimate goal is to automate processes into as high degree as possible. From my experience from different companies (big and also small ones), we can divide processes into two groups. We could call the first "virtual processes" as they're not significant for valuable outcomes (they don't contribute to production of real products) and are very often in accordance with different standards (ISO, CMMI, ITIL, etc.) as they can use the same wording, because they're overly general (like the standards) and.
+The ultimate goal is to automate processes into as high degree as possible. From our experience from different companies (big and also small ones), we can divide processes into two groups. We could call the first "virtual processes" as they're not significant for valuable outcomes (they don't contribute to production of real products) and are very often in accordance with different standards (ISO, CMMI, ITIL, etc.) as they can use the same wording, because they're overly general (like the standards) and.
 
 It will allow to ease administrative tasks, make everything which works with digital data work automatically, make the system sustainable, maintainable and continuously changing in time without data-loss and without increased effort.
 
@@ -69,6 +70,6 @@ Both cases have two major things in common. The very last and most important res
 
 We noticed, that the problem specification using a conceptual model actually exactly meets the functional user requirements. We also came across one project for Czech Ministry of labour and social affairs where there was no time to make a friendly user-interface (the deadline was cca 4 months after the project started) and as such, the resulting system was actually 1:1 copy of the conceptual model. This system is successfully used nowadays and actually has a little bit steeper learning curve than other systems, but on the other hand, each change of the system doesn't brake the current user-interface almost in any way. Which means, that users don't need to change their behavior every month after deployment of new version as is quite common for usual information systems.
 
-We want to address all the issues imposed by the current approach. This is the time of creation, ease of deployment, ease of change (for the maintainer, but also for users) and portability. According to my current technical specification of my system, the system for Ministry of labour and social affairs would be done (with testing) in few weeks (about 3), would be backend agnostic (wanna use your own DB server? or Amazon? or Google?; wanna use different infrastructre? your own? local provider? Google?; wanna use different authentication and authorization methods seamlessly? wanna have different outputs (PDF, email, web interface, QML interface, Android APP, electronic governmental tax system, whatever...)?; wanna be sure, that even if my company disappear/bankrupt, all the data, all the knowledge around the deployed system is still available?) and would have much lower risk of errors as most of the human labour would be eliminated.
+We want to address all the issues imposed by the current approach. This is the time of creation, ease of deployment, ease of change (for the maintainer, but also for users) and portability. According to our current technical specification of our system, the system for Ministry of labour and social affairs would be done (with testing) in few weeks (about 3), would be backend agnostic (wanna use your own DB server? or Amazon? or Google?; wanna use different infrastructre? your own? local provider? Google?; wanna use different authentication and authorization methods seamlessly? wanna have different outputs (PDF, email, web interface, QML interface, Android APP, electronic governmental tax system, whatever...)?; wanna be sure, that even if my company disappear/bankrupt, all the data, all the knowledge around the deployed system is still available?) and would have much lower risk of errors as most of the human labour would be eliminated.
 
 Properties will include remote interface auto generation (with authentication of course) and will employ an approach "everything automated with exceptional human intervention" rather than the current "humans do everything with a small number of exceptions for specific semi-automated subtasks" - my goal is to avoid humans' labour (if it sounds weird, then look at the best nature-friendly economy models to realize, that if the mankind used all the current existing/in_production technology on the right places, each adult would need to work less than 2 hours per day in a workweek; start with The Zeitgeist Movement and resource-based economy model).
