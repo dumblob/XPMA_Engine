@@ -41,7 +41,7 @@ technical remarks:
 * scalability - the resulting systems will not use "engine", but will be stand-alone distributed and parallelized applications
 * built with soft real-time messaging (e.g. collaboration) in mind (in the models themself and in the resulting system as well)
 * later on there could be added some auto-inferable parts of SW process improvement
-* use of "remote interfaces" provided by other SaaS/PaaS systems in models allow tight and extremely quick integration
+* use of "remote interfaces" provided by other SaaS/PaaS systems in models allow tight and extremely quick integration which is also well measurable using inherent metrics
 
 general examples:
 * information systems (both small and huge ones); e.g. administrative tasks
