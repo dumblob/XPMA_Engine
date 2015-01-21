@@ -50,6 +50,7 @@
 * curses CLI front-end howto http://ccfe.altervista.org/
 * From the analysis of the primary studies extracted, it can be concluded that the improvement approaches can be generated at an organizational or a technical level. It should be emphasized that there are studies (11%) which, in the quest to support actions of process improvement, propose the supplying of technical tools and facilities that support the activities related to the processes. This is termed as technical infrastructure and includes features such as document templates, process models, techniques and tools.
 * see Pino et al. 2008
+* syntax for the graph (http://blog.duangle.com/2015/01/conspire-programming-environment-for.html?m=1)
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
