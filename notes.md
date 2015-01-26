@@ -8,6 +8,7 @@
 * BPML (BPMI.org; deprecated)
 * JBPM3
 * XPDL
+* BORM
 
 #### requirements
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
@@ -41,6 +42,7 @@
 * Archi - comprehend, but too demanding BPMN modeller in Java
 * Enterprise Architect
   * http://www.sparxsystems.com.au/products/ea/index.html
+* OpenCASE and BORM
 
 #### function points auto-generated from the BPML/... to estimate usual cost
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
