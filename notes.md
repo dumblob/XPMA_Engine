@@ -4,11 +4,12 @@
 * WSFL (IBM)
 * XLANG (M$)
 * WSDL (???)
-* BPMN 2.0
+* BPMN 2.0; covers control, data (loosely), authorization, exception
 * BPML (BPMI.org; deprecated)
 * JBPM3
 * XPDL
 * BORM
+* YAWL
 
 #### requirements
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
@@ -17,6 +18,7 @@
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
 * Research and Implementation of Code Generator for Information System Based on SOA
+* interface modules for enterprise messaging systems/buses
 * On generators for embedded information systems
 * An I-CASE system for automatic generation of MIS software-MISG/CASE
 * a possibility to generate larger modules separately with secure remote interface and parallel execution of those to be able to scale and run in a distributed env
