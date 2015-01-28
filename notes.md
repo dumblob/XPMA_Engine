@@ -10,6 +10,7 @@
 * XPDL
 * BORM
 * YAWL
+* PNML (Woped tool)
 
 #### requirements
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
