@@ -11,6 +11,7 @@
 * BORM
 * YAWL
 * PNML (Woped tool)
+* SEAM; covers data + processes
 
 #### requirements
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
@@ -35,6 +36,7 @@
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
 
 #### existing tools
+* http://www.workflowpatterns.com/vendors/
 * WebRation software comprises nearly everything needed:
   * BPMN/BPEL BPML
   * support for EDI (http://en.wikipedia.org/wiki/Electronic_data_interchange)
@@ -63,6 +65,7 @@
 * Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
 * *The early ancestors of PAIS are the office information systems namely BDL (Hammer, Howe, Kruskal, & Wladawsky, 1977), SCOOP (Zisman, 1977), POISE (Croft & Lefkowitz, 1984), Officetalk-Zero (Ellis & Nutt, 1980), whose purpose was to automate the office functions such as document editing or communication. There were two research approaches, one relying on a procedural prescription of the tasks using Petri nets (Zisman, 1977; Holt, 1985; Hammer et al., 1977) and another being data-centered and focusing on the office’s objects manipulation.* (Elena Epure et al. 2013)
 * WORKFLOW – BPM SYSTÉMY (Ing. Tomáš Novotný, 2009); http://www.fit.vutbr.cz/study/courses/TJD/public/
+* SEAM: A State-Entity-Activity-Model for a Well-Defined Workflow Development Methodology (A. Bajaj & S. Ram, 2005); http://nfp.collins.utulsa.edu/bajaja/MyInfo/
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
