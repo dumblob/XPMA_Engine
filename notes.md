@@ -70,6 +70,7 @@
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
 * IS generator
+* info about the work of salesmens, state and development of the communication with customers, state of the offerings and trading/sales cases, notes from meetings/negotiations/deals, payment policy and it's obedience, etc.
 * generator for RPM spec files
 * automated configuration mgmt (http://sharknet.us/2014/02/01/automated-configuration-management-challenges-with-idempotency/)
 * VENTUS® Software (ERP systém pro komplexní řešení procesů v obchodních a obchodně-výrobních společnostech s výraznou podporou řízeného skladu - WMS.)
