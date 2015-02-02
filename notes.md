@@ -34,6 +34,7 @@
 * a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
 * direct/lead the designer to update the model immediately from the bottom requests (people performing the processes), but not from top!
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
+* ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
 
 #### existing tools
 * http://www.workflowpatterns.com/vendors/
@@ -66,6 +67,7 @@
 * *The early ancestors of PAIS are the office information systems namely BDL (Hammer, Howe, Kruskal, & Wladawsky, 1977), SCOOP (Zisman, 1977), POISE (Croft & Lefkowitz, 1984), Officetalk-Zero (Ellis & Nutt, 1980), whose purpose was to automate the office functions such as document editing or communication. There were two research approaches, one relying on a procedural prescription of the tasks using Petri nets (Zisman, 1977; Holt, 1985; Hammer et al., 1977) and another being data-centered and focusing on the office’s objects manipulation.* (Elena Epure et al. 2013)
 * WORKFLOW – BPM SYSTÉMY (Ing. Tomáš Novotný, 2009); http://www.fit.vutbr.cz/study/courses/TJD/public/
 * SEAM: A State-Entity-Activity-Model for a Well-Defined Workflow Development Methodology (A. Bajaj & S. Ram, 2005); http://nfp.collins.utulsa.edu/bajaja/MyInfo/
+* The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
