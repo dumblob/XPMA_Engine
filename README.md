@@ -23,7 +23,7 @@ Actually, Bizagi is the only one closer to our idea, but it's still too little a
 * easy update and maintainability
 * easy extending and exchange of backends and frontends
 * easy connection to existing systems with "remote interfaces"
-* no need for verification (ratio model:implementation is guaranteed to be 1:1 because of generation)
+* no need for verification (ratio model:implementation is guaranteed to be 1:1 because of generation) - forget about Barbora Zimmerová, *Modelling and Formal Analysis of Component-Based Systems in View of Component Interaction*, dissertation, 2008
 * easy to validate (model is simple and self-describing)
 * easy to create the model as ordinary users intuitively understand processes (compared to data models, transactions, objects, routines and all other IT stuff)
 * easy to monitor anything in the system
