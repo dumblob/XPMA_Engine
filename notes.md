@@ -60,6 +60,7 @@
 * From the analysis of the primary studies extracted, it can be concluded that the improvement approaches can be generated at an organizational or a technical level. It should be emphasized that there are studies (11%) which, in the quest to support actions of process improvement, propose the supplying of technical tools and facilities that support the activities related to the processes. This is termed as technical infrastructure and includes features such as document templates, process models, techniques and tools.
 * see Pino et al. 2008
 * syntax for the graph (http://blog.duangle.com/2015/01/conspire-programming-environment-for.html?m=1)
+* enterprise architecture design (~ the top of the business process architecture); Remco Dijkman, Irene Vanderfeesten, Hajo A Reijers, *The road to a business process architecture: an overview of approaches and their use*, 2011
 
 #### references to papers...
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
