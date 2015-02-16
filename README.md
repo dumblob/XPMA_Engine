@@ -1,12 +1,10 @@
-XPMA (eXtensive Process Modelling and Automation)
-=================================================
+# XPMA (eXtensive Process Modelling and Automation)
 
 *Exchange tedious work for computer force!*
 
 A rough description of the idea follows. First you can read the structured variant (TL;DR) and then "THE LONG STORY" written in a marketing-like way.
 
-TL;DR (a structured description)
-----------------------------------
+## TL;DR (a structured description)
 
 We aim to create a theoretical background with corresponding implementation for automation of processes and workflows. The rough idea is to take a high-level process description language (BPMN 2.0, WSFS, BPEL4WS, XPDL etc.), extend it if utterly needed (we'd like to create a theoretical background for reasoning "why it's not needed to extend the existing chosen language" with discussion of possible solutions for treatment of cases which can't be covered by the language) and from a descriptions in this language generate a fully working system performing the modeled tasks. The approach might be viewed also as a very much extended and tailored integration.
 
@@ -53,8 +51,7 @@ general examples:
 
 Expected time for development in one person (full-time): 2 years for a very basic version. 3 years more for advanced modules, pre-prepared processes, connectors etc.
 
-THE LONG STORY (a marketing description)
-----------------------------------------
+## THE LONG STORY (a marketing description)
 
 In the following lines, we're describing an idea for a thesis and/or future development and especially practical deployment.
 
@@ -73,3 +70,6 @@ We noticed, that the problem specification using a conceptual model actually exa
 We want to address all the issues imposed by the current approach. This is the time of creation, ease of deployment, ease of change (for the maintainer, but also for users) and portability. According to our current technical specification of our system, the system for Ministry of labour and social affairs would be done (with testing) in few weeks (about 3), would be backend agnostic (wanna use your own DB server? or Amazon? or Google?; wanna use different infrastructre? your own? local provider? Google?; wanna use different authentication and authorization methods seamlessly? wanna have different outputs (PDF, email, web interface, QML interface, Android APP, electronic governmental tax system, whatever...)?; wanna be sure, that even if my company disappear/bankrupt, all the data, all the knowledge around the deployed system is still available?) and would have much lower risk of errors as most of the human labour would be eliminated.
 
 Properties will include remote interface auto generation (with authentication, of course) and will employ an approach "everything automated with occasional human intervention" rather than the current "humans do everything with a small number of exceptions for specific semi-automated subtasks" - our goal is to avoid human labour. If this goal sounds weird, then look at the best nature-friendly economy models available. It's pleasant to realize, that if the mankind used all the currently existing technology used in production on proper places, each adult would need to work less than 2 hours per day in a workweek. Begin with The Zeitgeist Movement and resource-based economy model.
+
+## Authors
+* [Jan Pacner](https://www.linkedin.com/in/pacnerjan)
