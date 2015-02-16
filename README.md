@@ -58,7 +58,7 @@ THE LONG STORY (a marketing description)
 
 In the following lines, we're describing an idea for a thesis and/or future development and especially practical deployment.
 
-The ultimate goal is to automate processes into as high degree as possible. From our experience from different companies (big and also small ones), we can divide processes into two groups. We could call the first "virtual processes" as they're not significant for valuable outcomes (they don't contribute to production of real products) and are very often in accordance with different standards (ISO, CMMI, ITIL, etc.) as they can use the same wording, because they're overly general (like the standards) and.
+The ultimate goal is to automate processes into as high degree as possible. From our experience from different companies (big and also small ones), we can divide processes into two groups. We could call the first "virtual processes" as they're not significant for valuable outcomes (they don't contribute to production of real products/services) and are very often in accordance with different standards (ISO, CMMI, ITIL, etc.) as they can use the same wording, because they're overly general (like the standards) and "tangible processes" which (in)directly contribute to a specific non-empty set of valuable outcomes/goals (products and/or services).
 
 It will allow to ease administrative tasks, make everything which works with digital data work automatically, make the system sustainable, maintainable and continuously changing in time without data-loss and without increased effort.
 
