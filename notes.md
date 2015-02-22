@@ -62,6 +62,7 @@
 * syntax for the graph (http://blog.duangle.com/2015/01/conspire-programming-environment-for.html?m=1)
 * NoFlo (syntax for the graph): http://noflojs.org/documentation/fbp/
 * enterprise architecture design (~ the top of the business process architecture); Remco Dijkman, Irene Vanderfeesten, Hajo A Reijers, *The road to a business process architecture: an overview of approaches and their use*, 2011
+* Atlassian Crowd identity mgmt (free for open-source, non-profit and classrooms)
 
 #### references to papers...
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
