@@ -74,7 +74,7 @@
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
-* PRINCE2 document generators (forms, graph drawing, export)
+* PRINCE2 document generators (forms, graph drawing, export; Harward Business Reviews subscription)
 * IS generator
 * info about the work of salesmens, state and development of the communication with customers, state of the offerings and trading/sales cases, notes from meetings/negotiations/deals, payment policy and it's obedience, etc.
 * generator for RPM spec files
