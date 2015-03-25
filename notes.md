@@ -35,6 +35,7 @@
 * direct/lead the designer to update the model immediately from the bottom requests (people performing the processes), but not from top!
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
+* support for running solely off-line (i.e. only locally or on LAN)
 
 #### existing tools
 * http://www.workflowpatterns.com/vendors/
