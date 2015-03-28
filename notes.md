@@ -64,6 +64,18 @@
 * NoFlo (syntax for the graph): http://noflojs.org/documentation/fbp/
 * enterprise architecture design (~ the top of the business process architecture); Remco Dijkman, Irene Vanderfeesten, Hajo A Reijers, *The road to a business process architecture: an overview of approaches and their use*, 2011
 * Atlassian Crowd identity mgmt (free for open-source, non-profit and classrooms)
+* look at the following keywords/facts
+    * BPSim (WfMC standard)
+    * decision tables (maybe equivalent to "table rules")
+    * business rules
+    * BAM
+    * "HA runtime data" is very important for managers/business
+    * jBPM rules
+        * Java (native lang)
+        * DSL (from natural lang)
+        * table rules
+        * guided rules (a form with ...)
+    * jBPM has 20 ms overhead
 
 #### references to papers...
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
