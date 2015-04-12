@@ -17,6 +17,7 @@
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
 * continuous integration (i.e. real-time UI generation for presentation...)
+* UI generation <-> constraint defined UI
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
 * Research and Implementation of Code Generator for Information System Based on SOA
