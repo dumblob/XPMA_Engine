@@ -88,6 +88,23 @@
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
+* **Domov pro mne**
+
+    Domov pro mne poskytuje osobní asistenci dětem i dospělým se zdravotním postižením. Tuto službu vykonávají zaměstnanci v domácnosti uživatelů služby nebo v jiném prostředí dle potřeby (např. škola, zaměstnání). Dále Domov pro mne organizuje řadu zážitkových pobytů a společenských akcí pro osoby s handicapem.
+
+    Zadání:
+
+    Proveďte analýzu stávajícího systému tvorby časového harmonogramu sociální služby osobní asistence a na to navazující agendy pracovní docházky, fakturace za služby a vykazování statistických dat. Vytvořte návrh funkčnosti systému a implementujte. V co největší míře využijte technologie a informace, které jsou již k dispozici v rámci organizace.
+
+    Nový systém bude schopen:
+
+    * párovat uživatele osobní asistence a pracovníky (osobní asistenty) organizace do časového rozvrhu
+    * generovat časový rozvrh specifický pro uživatele a specifický pro pracovníka
+    * vytvářet přehled čerpání asistenčních hodin a vytíženosti jednotlivých pracovníků
+    * vytvářet podklady pro fakturaci za poskytnutou službu osobní asistence
+    * vytvářet podklady pro interní účetnictví a platby zaměstnanců
+
+    V současné době organizace využívá Google Apps pro správu zaměstnanců a správu interních dokumentů.
 * PRINCE2 document generators (forms, graph drawing, export; Harward Business Reviews subscription)
 * IS generator
 * info about the work of salesmens, state and development of the communication with customers, state of the offerings and trading/sales cases, notes from meetings/negotiations/deals, payment policy and it's obedience, etc.
