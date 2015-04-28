@@ -53,6 +53,8 @@
 * Enterprise Architect
   * http://www.sparxsystems.com.au/products/ea/index.html
 * OpenCASE and BORM
+* GeneXus Evolution 3 and GeneXus Business Process Management Suite (http://www.genexus.com/products/business-process-management-suite?en) - quite nice and comprehensive IS generators with native and Web outputs for M$ Windows, Android and BlackBerry
+* WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html)
 
 #### function points auto-generated from the BPML/... to estimate usual cost
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
