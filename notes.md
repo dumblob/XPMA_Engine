@@ -33,6 +33,7 @@
 * adhoc (not affecting versin etc.) queries/changes_to_models allowed
 * well-queriable DB of models (i.e. the models' syntax/format should be very strict and distinct) - e.g. "I want a model using this feature, this feature and providing this feature"
 * a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
+* a general way how to "jump" to predefined locations or e.g. "recently viewed" in GUI
 * direct/lead the designer to update the model immediately from the bottom requests (people performing the processes), but not from top!
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
