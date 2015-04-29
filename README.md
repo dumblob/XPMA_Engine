@@ -33,7 +33,7 @@ Actually, Bizagi is the only one closer to our idea, but it's still too little a
 technical remarks:
 * continuous integration (a prototype is executed in background immediately after a small change in the model occurs and will guide the user what he did improperly or what is missing/unclear/undecidable)
 * multiplatform (both the tool and the resulting system)
-* auto-generation of "remote interfaces" (REST, RPC, message busses, etc.)
+* auto-generation of "remote interfaces" (REST, RPC, message busses, etc.) following e.g. the [JSend specification](http://labs.omniti.com/labs/jsend)
 * much simpler than the existing systems (mentioned in "arguments")
 * backend-agnostic and frontend-agnostic (there'll be modules offering these specifics)
 * scalability - the resulting systems will not use "engine", but will be stand-alone distributed and parallelized applications
