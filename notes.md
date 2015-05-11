@@ -92,6 +92,7 @@
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
+* Liferay and M$ SharePoint integration
 * **Domov pro mne**
 
     Domov pro mne poskytuje osobní asistenci dětem i dospělým se zdravotním postižením. Tuto službu vykonávají zaměstnanci v domácnosti uživatelů služby nebo v jiném prostředí dle potřeby (např. škola, zaměstnání). Dále Domov pro mne organizuje řadu zážitkových pobytů a společenských akcí pro osoby s handicapem.
