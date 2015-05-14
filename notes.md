@@ -89,6 +89,7 @@
 * WORKFLOW – BPM SYSTÉMY (Ing. Tomáš Novotný, 2009); http://www.fit.vutbr.cz/study/courses/TJD/public/
 * SEAM: A State-Entity-Activity-Model for a Well-Defined Workflow Development Methodology (A. Bajaj & S. Ram, 2005); http://nfp.collins.utulsa.edu/bajaja/MyInfo/
 * The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
+* The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
 
 #### testing (use-cases, advertisement)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
