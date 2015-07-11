@@ -3,7 +3,7 @@
 * WCSI (Sun)
 * WSFL (IBM)
 * XLANG (M$)
-* WSDL (???)
+* WSDL (??)
 * BPMN 2.0; covers control, data (loosely), authorization, exception
 * BPML (BPMI.org; deprecated)
 * JBPM3
