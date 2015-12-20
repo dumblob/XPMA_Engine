@@ -29,6 +29,7 @@ Actually, Bizagi is the only one closer to our idea, but it's still too little a
 * there is an utter need for different levels of process abstraction (our idea is feasible for all levels including primary, supporting and organizational processes)
 * Google currently very much promotes the "small scripts" approach with it's own "Google Apps Script". It's extremely limited, but it's growing popularity shows, that there is a huge number of people/groups which need automation of processes (the Google Apps Script is most often used with Google Docs for connecting all of them and also e.g. for producing animated charts).
 * growing need for a *flipped approach* - people creating value have to be creative and tell what they want/need instead of just obeying commands and getting used to inappropriate IT tools and processes
+* automatic versioning of logical files/collections/... (preventing data inconsistencies on a shared storage)
 
 technical remarks:
 * continuous integration (a prototype is executed in background immediately after a small change in the model occurs and will guide the user what he did improperly or what is missing/unclear/undecidable)
