@@ -68,6 +68,7 @@
 * NoFlo (syntax for the graph): http://noflojs.org/documentation/fbp/
 * enterprise architecture design (~ the top of the business process architecture); Remco Dijkman, Irene Vanderfeesten, Hajo A Reijers, *The road to a business process architecture: an overview of approaches and their use*, 2011
 * Keycloak (Identity and Access Management for Modern Applications, Services and APIs, login service)
+* [JOSSO 2](http://www.atricore.org/confluence/display/JOSSO1/JOSSO2+Birds-eye+View) Identity Management, Access Management and Single Sign-On system
 * Atlassian Crowd identity mgmt (free for open-source, non-profit and classrooms; is it also authentication/login service?)
 * efficient RPC/RMI and serialization format with type information included (http://www.lua.inf.puc-rio.br/gsoc/ideas2014.html#dynserial)
 * look at the following keywords/facts
