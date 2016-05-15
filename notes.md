@@ -60,6 +60,9 @@
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
 
 #### misc
+* backend DB
+    * [Mnesia](http://erlang.org/doc/man/mnesia.html ) - a distributed telecommunications DBMS (leverages Erlang)
+    * [Datomic](http://www.datomic.com/) - the fully transactional, cloud-ready, distributed database (leverages Datalog)
 * manage virtual machines in the Google Compute Engine (https://github.com/GoogleCloudPlatform/kubernetes)
 * curses CLI front-end howto http://ccfe.altervista.org/
 * From the analysis of the primary studies extracted, it can be concluded that the improvement approaches can be generated at an organizational or a technical level. It should be emphasized that there are studies (11%) which, in the quest to support actions of process improvement, propose the supplying of technical tools and facilities that support the activities related to the processes. This is termed as technical infrastructure and includes features such as document templates, process models, techniques and tools.
