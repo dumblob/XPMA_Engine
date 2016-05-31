@@ -14,20 +14,38 @@
 * SEAM; covers data + processes
 
 #### requirements
+
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
 * continuous integration (i.e. real-time UI generation for presentation...)
 * UI generation <-> constraint defined UI (including accessibility measures for visually impaired etc.)
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
-* Research and Implementation of Code Generator for Information System Based on SOA
 * interface modules for enterprise messaging systems/buses
+* remote API has to be versioned and the version checked in each session/request
+* Research and Implementation of Code Generator for Information System Based on SOA
+* remote API technologies (protocols, existing wide-spread systems, ...)
+    * Amazon Kinesis Modular Input
+        * Index data from Amazon Kinesis, a fully managed service for real-time streaming data.
+    * MQTT Modular Input
+        * Index messages from MQTT, a machine-to-machine connectivity protocol, by subscribing Splunk software to MQTT Broker Topics.
+    * SNMP Modular Input
+        * Collect data by polling attributes and catching traps from devices providing cooling and power distribution in the datacenter.
+    * Kafka Modular Input
+        * Index messages from Apache Kafka messaging brokers, including clusters managed by Zookeeper.
+    * REST API Modular Input
+        * Poll local and remote REST APIs and index the responses.
+    * JMS Modular Input
+        * Poll and index data from messaging queues from providers such as TibcoEMS, Weblogic JMS and ActiveMQ.
+    * AMQP Modular Input
+        * Index data from message queues provided by AMQP brokers.
+    * Splunk App for Stream
+        * Capture, filter and index real-time streaming wire data and network events.
 * On generators for embedded information systems
 * An I-CASE system for automatic generation of MIS software-MISG/CASE
 * a possibility to generate larger modules separately with secure remote interface and parallel execution of those to be able to scale and run in a distributed env
 * a possibility to disable some parts/chosen_functionality on-the-fly/in_runtime (useful for maintenance etc.)
 * auto-generated bindings for chosen identity/permission services (e.g. Google/F/twitter accounts)
-* remote API has to be versioned and the version checked in each session/request
 * no support for auto-conversion for existing data from existing systems - this switch will always be done manually (e.g. by hand-written scripts) for very high price (due to great amount of manual labor and risk of mistakes/errors)!
 * thorough simulation of the whole business possible
 * adhoc (not affecting versin etc.) queries/changes_to_models allowed
