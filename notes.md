@@ -19,6 +19,7 @@
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
 * continuous integration (i.e. real-time UI generation for presentation...)
 * UI generation <-> constraint defined UI (including accessibility measures for visually impaired etc.)
+    * web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
 * interface modules for enterprise messaging systems/buses
@@ -71,8 +72,8 @@
 * Enterprise Architect
   * http://www.sparxsystems.com.au/products/ea/index.html
 * OpenCASE and BORM
-* GeneXus Evolution 3 and GeneXus Business Process Management Suite (http://www.genexus.com/products/business-process-management-suite?en) - quite nice and comprehensive IS generators with native and Web outputs for M$ Windows, Android and BlackBerry
-* WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html)
+* GeneXus Evolution 3 and GeneXus Business Process Management Suite (http://www.genexus.com/products/business-process-management-suite?en ) - quite nice and comprehensive IS generators with native and Web outputs for M$ Windows, Android and BlackBerry
+* WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html )
 
 #### function points auto-generated from the BPML/... to estimate usual cost
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
