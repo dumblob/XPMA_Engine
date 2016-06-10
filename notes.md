@@ -119,6 +119,7 @@
 * statistics gathered for everything (especially for time and quality measures for each task for each assigned person, not role!)
 * processes executable in a "debugging/creative" mode, where the process can start with any task (temporary hidden start event before the task?) - this'll also allow ad-hoc usage of certain forms or tasks separately without the need to (possibly tediously) build and run a modified copy of the current process (=> the execution should be "separated" from the in-production processes and shouldn't affect the availability of the process engine for those in-production processes)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
+* Hyperion Financial Management integration (adopt the "cube" *standard dimensions*: scenario, year, period, view, entity, value, account, intercompany\_partner)
 * Liferay and M$ SharePoint integration
 * **Domov pro mne**
 
