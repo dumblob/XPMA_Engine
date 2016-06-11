@@ -115,10 +115,12 @@
 * The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
 * The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
 
-#### testing (use-cases, advertisement)
+#### Testing (use-cases, advertisement)
+
 * statistics gathered for everything (especially for time and quality measures for each task for each assigned person, not role!)
 * processes executable in a "debugging/creative" mode, where the process can start with any task (temporary hidden start event before the task?) - this'll also allow ad-hoc usage of certain forms or tasks separately without the need to (possibly tediously) build and run a modified copy of the current process (=> the execution should be "separated" from the in-production processes and shouldn't affect the availability of the process engine for those in-production processes)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
+* all web services (FAPI, MioWeb, etc.) from David Kirš
 * Hyperion Financial Management integration (adopt the "cube" *standard dimensions*: scenario, year, period, view, entity, value, account, intercompany\_partner; and other dimensions: cost\_center, product, segments/markets, customers, countries/geography, exchange\_variance\_analysis, data\_source, roll\_forward\_schedules/movement, KPIs/ratios, headcount)
 * Liferay and M$ SharePoint integration
 * **Domov pro mne**
