@@ -123,6 +123,7 @@
 * all web services (FAPI, MioWeb, etc.) from David Kirš
 * Hyperion Financial Management integration (adopt the "cube" *standard dimensions*: scenario, year, period, view, entity, value, account, intercompany\_partner; and other dimensions: cost\_center, product, segments/markets, customers, countries/geography, exchange\_variance\_analysis, data\_source, roll\_forward\_schedules/movement, KPIs/ratios, headcount)
 * Liferay and M$ SharePoint integration
+* running a household (shopping, trips & planning, keep track of all official documents & agreements & contracts & schedules & ..., birthday & nameday notifications & preparations, etc.)
 * **Domov pro mne**
 
     Domov pro mne poskytuje osobní asistenci dětem i dospělým se zdravotním postižením. Tuto službu vykonávají zaměstnanci v domácnosti uživatelů služby nebo v jiném prostředí dle potřeby (např. škola, zaměstnání). Dále Domov pro mne organizuje řadu zážitkových pobytů a společenských akcí pro osoby s handicapem.
