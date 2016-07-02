@@ -58,7 +58,12 @@
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
 * support for running solely off-line (i.e. only locally or on LAN)
 
+#### UI auto-generation
+
+* each collection/bigger_item must have an icon (derived from the name of the item or the content of the collection recursively)
+
 #### existing tools
+
 * http://www.workflowpatterns.com/vendors/
 * WebRation software comprises nearly everything needed:
   * BPMN/BPEL BPML
@@ -76,9 +81,11 @@
 * WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html )
 
 #### function points auto-generated from the BPML/... to estimate usual cost
+
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
 
 #### misc
+
 * backend DB
     * [Mnesia](http://erlang.org/doc/man/mnesia.html ) - a distributed telecommunications DBMS (leverages Erlang)
     * [Datomic](http://www.datomic.com/) - the fully transactional, cloud-ready, distributed database (leverages Datalog)
@@ -107,6 +114,7 @@
     * jBPM has 20 ms overhead
 
 #### references to papers...
+
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
 * Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
 * *The early ancestors of PAIS are the office information systems namely BDL (Hammer, Howe, Kruskal, & Wladawsky, 1977), SCOOP (Zisman, 1977), POISE (Croft & Lefkowitz, 1984), Officetalk-Zero (Ellis & Nutt, 1980), whose purpose was to automate the office functions such as document editing or communication. There were two research approaches, one relying on a procedural prescription of the tasks using Petri nets (Zisman, 1977; Holt, 1985; Hammer et al., 1977) and another being data-centered and focusing on the office’s objects manipulation.* (Elena Epure et al. 2013)
