@@ -99,7 +99,10 @@
 * Keycloak (Identity and Access Management for Modern Applications, Services and APIs, login service)
 * [JOSSO 2](http://www.atricore.org/confluence/display/JOSSO1/JOSSO2+Birds-eye+View) Identity Management, Access Management and Single Sign-On system
 * Atlassian Crowd identity mgmt (free for open-source, non-profit and classrooms; is it also authentication/login service?)
-* efficient RPC/RMI and serialization format with type information included (http://www.lua.inf.puc-rio.br/gsoc/ideas2014.html#dynserial)
+* 2-factor auth, but guaranteed different channels (i.e. not banking APP and auth SMS on the same mobile device; rather a HW or SW calculator with inputs...)
+* efficient RPC/RMI and serialization format
+    * with type information included: http://www.lua.inf.puc-rio.br/gsoc/ideas2014.html#dynserial
+    * fastest in the world: [Cap'n Proto](https://capnproto.org/ )
 * look at the following keywords/facts
     * BPSim (WfMC standard)
     * decision tables (maybe equivalent to "table rules")
