@@ -57,6 +57,7 @@
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
 * support for running solely off-line (i.e. only locally or on LAN)
+* security hardened outputs (preventing e.g. LD_PRELOAD etc. on all platforms including mobile ones)
 
 #### UI auto-generation
 
