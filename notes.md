@@ -63,6 +63,33 @@
 
 * each collection/bigger_item must have an icon (derived from the name of the item or the content of the collection recursively)
 
+#### Platforms
+
+Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html ).
+
+##### Desktop:Windows 10
+
+* https://github.com/MSOpenTech/redis
+
+##### Desktop:Mac OS X
+
+##### Desktop:Ubuntu
+
+##### Mobile:Android
+
+* is it required to use JNI or can we embed C code more easily?
+* `fork()` works, but might be a bit tricky with Java VM APPS (e.g. due to excess memory demands - use overcommit?); see also `posix_spawn()` (https://github.com/axiak/java_posix_spawn ) `vfork()` `clone()`
+* use only generic widgets with auto-placement
+* `embed redis java`
+
+##### Mobile:iOS
+
+* `fork()` not available => prepare (imitate) copy on write pthread fork just with threads; see also `pthread_create()`
+    * `redis thread safe`
+    * `embed redis c`
+    * [redislite](https://redislite.readthedocs.io/en/latest/ ) (Python "embedded" Redis)
+* allow sharding among threaded instances instead of among process instances
+
 #### existing tools
 
 * http://www.workflowpatterns.com/vendors/
