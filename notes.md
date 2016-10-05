@@ -58,6 +58,7 @@
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
 * support for running solely off-line (i.e. only locally or on LAN)
 * security hardened outputs (preventing e.g. LD_PRELOAD etc. on all platforms including mobile ones)
+* allows easy application of methods for automatical search for (sub)optimal input coefficient ranges, i.e. constraint optimization problems (e.g. simulated annealing)
 
 #### UI auto-generation
 
@@ -66,6 +67,10 @@
 #### Platforms
 
 Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html ).
+
+FIXME propagation of "stored" info back to the requester
+
+FIXME high performance data flow
 
 ##### Desktop:Windows 10
 
