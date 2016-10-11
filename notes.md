@@ -18,8 +18,7 @@
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
 * continuous integration (i.e. real-time UI generation for presentation...)
-* UI generation <-> constraint defined UI (including accessibility measures for visually impaired etc.)
-    * web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
+* UI generation
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
 * interface modules for enterprise messaging systems/buses
@@ -51,18 +50,24 @@
 * thorough simulation of the whole business possible
 * adhoc (not affecting versin etc.) queries/changes_to_models allowed
 * well-queriable DB of models (i.e. the models' syntax/format should be very strict and distinct) - e.g. "I want a model using this feature, this feature and providing this feature"
-* a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
-* a general way how to "jump" to predefined locations or e.g. "recently viewed" in GUI
 * direct/lead the designer to update the model immediately from the bottom requests (people performing the processes), but not from top!
 * support for multiple data/DB "backends" (useful e.g. for separating of confidential data from the other data)
 * ability to work without central server/authority (=> explore P2P with regard to velocity due to real-time collaboration)
 * support for running solely off-line (i.e. only locally or on LAN)
 * security hardened outputs (preventing e.g. LD_PRELOAD etc. on all platforms including mobile ones)
 * allows easy application of methods for automatical search for (sub)optimal input coefficient ranges, i.e. constraint optimization problems (e.g. simulated annealing)
+* modeling tool and mainly generated binaries are clean for antivirus programs (ask for exception in Symantec, AVG, etc.?)
 
 #### UI auto-generation
 
-* each collection/bigger_item must have an icon (derived from the name of the item or the content of the collection recursively)
+* constraint defined UI (including accessibility measures for visually impaired etc.)
+* each collection/bigger_item could have an icon (derived from the name of the item or the content of the collection recursively)
+* show tasks in parallel process branches next to each other (tiled, tabbed, ...)?
+* a general way how to "jump" to predefined locations or e.g. "recently viewed" in GUI
+* a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
+    * rule No. 1: all errors are **recoverable** (by humans)
+* each "widget" remembers last used value on a per widget instance basis and offers this value along with the default value (**with the same importance** - preferably next to each other)
+* web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
 
 #### Platforms
 
