@@ -68,6 +68,7 @@
     * rule No. 1: all errors are **recoverable** (by humans)
 * each "widget" remembers last used value on a per widget instance basis and offers this value along with the default value (**with the same importance** - preferably next to each other)
 * web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
+* combo-like widgets will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
 
 #### Platforms
 
