@@ -1,4 +1,6 @@
-#### languages (http://en.wikipedia.org/wiki/Dataflow_programming)
+#### languages
+
+* http://en.wikipedia.org/wiki/Dataflow_programming (must be useful also for ad-hoc DB querying - e.g. using unix-utils-inspired functions)
 * BPEL4WS (IBM + M$ + BEA); exe lang for BPMN
 * WCSI (Sun)
 * WSFL (IBM)
