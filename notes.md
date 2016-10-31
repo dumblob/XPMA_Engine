@@ -1,4 +1,4 @@
-#### languages
+#### Languages
 
 * http://en.wikipedia.org/wiki/Dataflow_programming (must be useful also for ad-hoc DB querying - e.g. using unix-utils-inspired functions)
 * BPEL4WS (IBM + M$ + BEA); exe lang for BPMN
@@ -15,7 +15,7 @@
 * PNML (Woped tool)
 * SEAM; covers data + processes
 
-#### requirements
+#### Requirements
 
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
@@ -103,7 +103,7 @@ FIXME high performance data flow
     * [redislite](https://redislite.readthedocs.io/en/latest/ ) (Python "embedded" Redis)
 * allow sharding among threaded instances instead of among process instances
 
-#### existing tools
+#### Existing tools
 
 * http://www.workflowpatterns.com/vendors/
 * WebRation software comprises nearly everything needed:
@@ -121,11 +121,11 @@ FIXME high performance data flow
 * GeneXus Evolution 3 and GeneXus Business Process Management Suite (http://www.genexus.com/products/business-process-management-suite?en ) - quite nice and comprehensive IS generators with native and Web outputs for M$ Windows, Android and BlackBerry
 * WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html )
 
-#### function points auto-generated from the BPML/... to estimate usual cost
+#### Function points auto-generated from the BPML/... to estimate usual cost
 
 * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
 
-#### misc
+#### Misc
 
 * backend DB
     * [Mnesia](http://erlang.org/doc/man/mnesia.html ) - a distributed telecommunications DBMS (leverages Erlang)
@@ -156,8 +156,9 @@ FIXME high performance data flow
         * table rules
         * guided rules (a form with ...)
     * jBPM has 20 ms overhead
+* register intellectual property at [EUIPO](https://euipo.europa.eu/ohimportal/cs/home )
 
-#### references to papers...
+#### References to papers...
 
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
 * Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
