@@ -18,7 +18,8 @@ reasons:
 arguments:
 * no existing tool nowadays (neither IBM BPM nor jBPM nor Bonita nor Bizagi suite does it - those are only UIs for fill-in forms, but they don't offer auto-generation of DB, easy upgrade of processes, deployment on different places/technologies, no other input/output - just web interface which is good only for forms and visualization, nothing advanced like custom programmed logic)
 Actually, Bizagi is the only one closer to our idea, but it's still too little automated and has various constraints (UI, their own engine, connectors too specific but non-parametrizable and platform-dependent tools, getting bloated, etc.). In other words, Bizagi supports only a subset of business processes. Our idea, if realized, is usable also for non-business processes. By the way, Bizagi made a huge leap in 2014 - before, it wasn't even close to our idea.
-* easy update and maintainability
+* easy update (auto live migration)
+* **no maintenance** needed (TODO calculate estimation of savings in terms of money and time)
 * easy extending and exchange of backends and frontends
 * easy connection to existing systems with "remote interfaces"
 * no need for verification (ratio model:implementation is guaranteed to be 1:1 because of generation) - forget about Barbora Zimmerová, *Modelling and Formal Analysis of Component-Based Systems in View of Component Interaction*, dissertation, 2008
