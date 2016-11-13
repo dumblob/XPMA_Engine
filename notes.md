@@ -159,6 +159,7 @@ TODO auto-generated to estimate usual cost and time
         * guided rules (a form with ...)
     * jBPM has 20 ms overhead
 * register intellectual property at [EUIPO](https://euipo.europa.eu/ohimportal/cs/home )
+* auto submit hashes of releases to codehash.db to improve security
 
 #### References to papers...
 
