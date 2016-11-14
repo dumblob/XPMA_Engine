@@ -74,9 +74,10 @@
 
 #### Platforms
 
-Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html ).
+Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html , http://oldblog.antirez.com/post/redis-persistence-demystified.html ). Make sure the underlying filesystem forces the HW standard (e.g. SATA) to use/flush write barriers, because it's often broken in HDDs and additionally filesystems do not enforce it.
 
 FIXME propagation of "stored" info back to the requester
+    * it seems, even each (**?**) "write" Redis command "returns" once the chosen persistence settings are satisfied (so if `fsync()` is set for each command in AOF, then it's fully durable)
 
 FIXME high performance data flow
 
