@@ -76,8 +76,11 @@
 
 Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html , http://oldblog.antirez.com/post/redis-persistence-demystified.html ). Make sure the underlying filesystem forces the HW standard (e.g. SATA) to use/flush write barriers, because it's often broken in HDDs and additionally filesystems do not enforce it.
 
+Thorough guide how to scale Redis: http://petrohi.me/post/6323289515/scaling-redis .
+
 FIXME propagation of "stored" info back to the requester
-    * it seems, even each (**?**) "write" Redis command "returns" once the chosen persistence settings are satisfied (so if `fsync()` is set for each command in AOF, then it's fully durable maybe except for pipelining, when we can loose the last "group" of commits (but not the whole last 1s window))
+
+    * it seems each (**?**) "write" Redis command "returns" once the chosen persistence settings are satisfied (so if `fsync()` is set for each command in AOF, then it's fully durable maybe except for pipelining, when we can loose the last "group" of commits (but not the whole last 1s window))
 
 FIXME high performance data flow
 
