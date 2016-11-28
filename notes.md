@@ -182,6 +182,7 @@ TODO auto-generated to estimate usual cost and time
 * processes executable in a "debugging/creative" mode, where the process can start with any task (temporary hidden start event before the task?) - this'll also allow ad-hoc usage of certain forms or tasks separately without the need to (possibly tediously) build and run a modified copy of the current process (=> the execution should be "separated" from the in-production processes and shouldn't affect the availability of the process engine for those in-production processes)
 * near-user usability (*I'll easily create my very own process of every-morning mail check'n reply workflow*)
 * all web services (FAPI, MioWeb, etc.) from David Kirš
+* law advising companies to support their products (e.g. start-up contracts with contractors and taxing)
 * Hyperion Financial Management integration (adopt the "cube" *standard dimensions*: scenario, year, period, view, entity, value, account, intercompany\_partner; and other dimensions: cost\_center, product, segments/markets, customers, countries/geography, exchange\_variance\_analysis, data\_source, roll\_forward\_schedules/movement, KPIs/ratios, headcount)
 * Liferay and M$ SharePoint integration
 * running a household (shopping, trips & planning, keep track of all official documents & agreements & contracts & schedules & ..., birthday & nameday notifications & preparations, medical checkups, etc.)
