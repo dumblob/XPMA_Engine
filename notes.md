@@ -24,7 +24,9 @@
 * bindings to storage or even database (Camlistore/Tahoe-LAFS/Google/Amazon...)
 * Information System Model and Architecture Generator
 * interface modules for enterprise messaging systems/buses
-* remote API has to be versioned and the version checked in each session/request
+* remote API
+    * is versioned (version is being checked in each session/request)
+    * incorporates detailed monitoring
 * Research and Implementation of Code Generator for Information System Based on SOA
 * remote API technologies (protocols, existing wide-spread systems, ...)
     * Amazon Kinesis Modular Input
