@@ -180,6 +180,7 @@ TODO auto-generated to estimate usual cost and time
 
 #### Testing (use-cases, advertisement)
 
+* web UI auto testing (e.g. for continuous improvement aka CI) http://pa11y.org/
 * rewrite [DBT2](https://dev.mysql.com/downloads/benchmarks.html ) (MySQL Benchmark Tool simulating large OLTP warehouses)
 * statistics gathered for everything (especially for time and quality measures for each task for each assigned person, not role!)
 * processes executable in a "debugging/creative" mode, where the process can start with any task (temporary hidden start event before the task?) - this'll also allow ad-hoc usage of certain forms or tasks separately without the need to (possibly tediously) build and run a modified copy of the current process (=> the execution should be "separated" from the in-production processes and shouldn't affect the availability of the process engine for those in-production processes)
