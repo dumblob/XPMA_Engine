@@ -90,6 +90,7 @@ FIXME high performance data flow
 ##### Desktop:Windows 10
 
 * https://github.com/MSOpenTech/redis
+    * `fork()` implementation?
 
 ##### Desktop:Mac OS X
 
@@ -105,6 +106,7 @@ FIXME high performance data flow
 ##### Mobile:iOS
 
 * `fork()` not available => prepare (imitate) copy on write pthread fork just with threads; see also `pthread_create()`
+    * `fork()` implementation in Cygwin
     * `redis thread safe`
     * `embed redis c`
     * [redislite](https://redislite.readthedocs.io/en/latest/ ) (Python "embedded" Redis)
