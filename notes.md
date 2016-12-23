@@ -182,6 +182,7 @@ TODO auto-generated to estimate usual cost and time
 
 #### Testing (use-cases, advertisement)
 
+* health care, hospital, and medical systems (company TrapX from CZ evaluating security vulnerabilities, data leaking, and the black market regarding health care)
 * web UI auto testing (e.g. for continuous improvement aka CI) http://pa11y.org/
 * rewrite [DBT2](https://dev.mysql.com/downloads/benchmarks.html ) (MySQL Benchmark Tool simulating large OLTP warehouses)
 * statistics gathered for everything (especially for time and quality measures for each task for each assigned person, not role!)
