@@ -183,8 +183,9 @@ TODO auto-generated to estimate usual cost and time
 * The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
 * The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
 
-#### Testing (use-cases, advertisement)
+#### Testing (use-cases, advertisement, marketing)
 
+* (read-only) ability to "stop the time" (and also move it backwards and then forwards)
 * https://www.rsa.com/ products
 * health care, hospital, and medical systems (company TrapX from CZ evaluating security vulnerabilities, data leaking, and the black market regarding health care; https://www.veeva.com/ makes CRM etc.)
 * web UI auto testing (e.g. for continuous improvement aka CI) http://pa11y.org/
