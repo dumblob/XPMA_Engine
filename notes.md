@@ -185,6 +185,7 @@ TODO auto-generated to estimate usual cost and time
 
 #### Testing (use-cases, advertisement, marketing)
 
+* companies using XPMA will have significantly lower costs of external consultants, because these do not need to spend time with direct hands-on analysis in your company, but rather just immediately take a look at the models of your implemented processes and data (this allows absolutely exact evaluation of the external consultant's work and calculation of his price)
 * (read-only) ability to "stop the time" (and also move it backwards and then forwards)
 * https://www.rsa.com/ products
 * health care, hospital, and medical systems (company TrapX from CZ evaluating security vulnerabilities, data leaking, and the black market regarding health care; https://www.veeva.com/ makes CRM etc.)
