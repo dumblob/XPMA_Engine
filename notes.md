@@ -185,6 +185,7 @@ TODO auto-generated to estimate usual cost and time
 
 #### Testing (use-cases, advertisement, marketing)
 
+* there might be a code for service/script tasks allowing running pure excel models converted to C using https://github.com/tamc/excel_to_code
 * companies using XPMA will have significantly lower costs of external consultants, because these do not need to spend time with direct hands-on analysis in your company, but rather just immediately take a look at the models of your implemented processes and data (this allows absolutely exact evaluation of the external consultant's work and calculation of his price)
 * (read-only) ability to "stop the time" (and also move it backwards and then forwards)
 * https://www.rsa.com/ products
