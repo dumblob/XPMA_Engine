@@ -74,6 +74,7 @@
 * web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
 * combo-like widgets will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
 * long-living widgets (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
+* inspiration in W3.CSS design templates (W3.CSS is framework in pure CSS)
 
 #### Platforms
 
