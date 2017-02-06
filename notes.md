@@ -183,6 +183,13 @@ TODO auto-generated to estimate usual cost and time
 * The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
 * The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
 
+#### Sales
+
+* multiple service variants
+    * the cheapest will not use diplomatic messages (and thus say straight why are things as they are as it will favour leaf workers over managers in terms of the mainstream perception)
+        * e.g. if the customer decides to have just the default not-so-awesome looking UI, then it will appear in built-in FAQs as "your manager <name|role> bought just the cheap variant with bad UI"
+        * this option to show honest (non-diplomatic) messages might be mitigated by increasing the price by 0.5*price_of_highly_customized_UI
+
 #### Testing (use-cases, advertisement, marketing)
 
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
@@ -190,7 +197,7 @@ TODO auto-generated to estimate usual cost and time
 * HL7 medical XML schema (implemented e.g. by Iguana)
 * companies using XPMA will have significantly lower costs of external consultants, because these do not need to spend time with direct hands-on analysis in your company, but rather just immediately take a look at the models of your implemented processes and data (this allows absolutely exact evaluation of the external consultant's work and calculation of his price)
 * (read-only) ability to "stop the time" (and also move it backwards and then forwards)
-* https://www.rsa.com/ products
+* model the products from https://www.rsa.com/
 * health care, hospital, and medical systems (company TrapX from CZ evaluating security vulnerabilities, data leaking, and the black market regarding health care; https://www.veeva.com/ makes CRM etc.)
 * web UI auto testing (e.g. for continuous improvement aka CI) http://pa11y.org/
 * rewrite [DBT2](https://dev.mysql.com/downloads/benchmarks.html ) (MySQL Benchmark Tool simulating large OLTP warehouses)
