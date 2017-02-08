@@ -190,6 +190,7 @@ TODO auto-generated to estimate usual cost and time
     * the cheapest will not use diplomatic messages (and thus say straight why are things as they are as it will favour leaf workers over managers in terms of the mainstream perception)
         * e.g. if the customer decides to have just the default not-so-awesome looking UI, then it will appear in built-in FAQs as "your manager <name|role> bought just the cheap variant with bad UI"
         * this option to show honest (non-diplomatic) messages might be mitigated by increasing the price by 0.5*price_of_highly_customized_UI
+* optional audit capabilities (who logged where and when and what approximately has been used)
 
 #### Testing (use-cases, advertisement, marketing)
 
