@@ -192,6 +192,11 @@ TODO auto-generated to estimate usual cost and time
         * this option to show honest (non-diplomatic) messages might be mitigated by increasing the price by 0.5*price_of_highly_customized_UI
 * optional audit capabilities (who logged where and when and what approximately has been used)
 
+#### Community
+
+* conferences
+* meetups
+
 #### Testing (use-cases, advertisement, marketing)
 
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
