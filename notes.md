@@ -44,6 +44,9 @@
 * security hardened outputs (preventing e.g. LD_PRELOAD etc. on all platforms including mobile ones)
 * allows easy application of methods for automatical search for (sub)optimal input coefficient ranges, i.e. constraint optimization problems (e.g. simulated annealing)
 * modeling tool and mainly generated binaries are clean for antivirus programs (ask for exception in Symantec, AVG, etc.?)
+* The modeler shall support auto generation of processes based on a specification of the initial state (includes also all available resources) and the goal. Planning languages as PDDL [8] might be one of the ways to go. Generation should have 2 variants:
+    * `one-shot`, which runs the generation only once and places the result to the defined place to be modified by a human
+    * `continuous`, which runs generation automatically each time anything from the goal or initial state changed (e.g. available resources like roles or actual persons) and provides the result read-only (non-modifiable by anything)
 
 ## UI auto-generation
 
@@ -131,7 +134,7 @@ FIXME high performance data flow
 * BORM
 * YAWL
 * PNML (Woped tool)
-* SEAM; covers data + processes
+* SEAM; covers data (so well as SQL) + processes (loosely)
 
 ## Misc
 
@@ -172,13 +175,14 @@ FIXME high performance data flow
 
 ## References to papers...
 
-* a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
-* Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
-* *The early ancestors of PAIS are the office information systems namely BDL (Hammer, Howe, Kruskal, & Wladawsky, 1977), SCOOP (Zisman, 1977), POISE (Croft & Lefkowitz, 1984), Officetalk-Zero (Ellis & Nutt, 1980), whose purpose was to automate the office functions such as document editing or communication. There were two research approaches, one relying on a procedural prescription of the tasks using Petri nets (Zisman, 1977; Holt, 1985; Hammer et al., 1977) and another being data-centered and focusing on the office’s objects manipulation.* (Elena Epure et al. 2013)
-* WORKFLOW – BPM SYSTÉMY (Ing. Tomáš Novotný, 2009); http://www.fit.vutbr.cz/study/courses/TJD/public/
-* SEAM: A State-Entity-Activity-Model for a Well-Defined Workflow Development Methodology (A. Bajaj & S. Ram, 2005); http://nfp.collins.utulsa.edu/bajaja/MyInfo/
-* The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
-* The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
+1. a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
+1. Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
+1. *The early ancestors of PAIS are the office information systems namely BDL (Hammer, Howe, Kruskal, & Wladawsky, 1977), SCOOP (Zisman, 1977), POISE (Croft & Lefkowitz, 1984), Officetalk-Zero (Ellis & Nutt, 1980), whose purpose was to automate the office functions such as document editing or communication. There were two research approaches, one relying on a procedural prescription of the tasks using Petri nets (Zisman, 1977; Holt, 1985; Hammer et al., 1977) and another being data-centered and focusing on the office’s objects manipulation.* (Elena Epure et al. 2013)
+1. WORKFLOW – BPM SYSTÉMY (Ing. Tomáš Novotný, 2009); http://www.fit.vutbr.cz/study/courses/TJD/public/
+1. SEAM: A State-Entity-Activity-Model for a Well-Defined Workflow Development Methodology (A. Bajaj & S. Ram, 2005); http://nfp.collins.utulsa.edu/bajaja/MyInfo/
+1. The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
+1. The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
+1. Jörg Hoffmann, Ingo Weber, Frank Michael Kraft. **SAP Speaks PDDL: Exploiting a Software-Engineering Model for Planning in Business Process Management.** In Journal of Artificial Intelligence Research 44 (2012) 587-632. July 2012
 
 ## Sales
 
