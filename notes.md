@@ -1,21 +1,4 @@
-#### Languages
-
-* http://en.wikipedia.org/wiki/Dataflow_programming (must be useful also for ad-hoc DB querying - e.g. using unix-utils-inspired functions)
-* BPEL4WS (IBM + M$ + BEA); exe lang for BPMN
-* WCSI (Sun)
-* WSFL (IBM)
-* XLANG (M$)
-* WSDL (??)
-* BPMN 2.0; covers control, data (loosely), authorization, exception
-* BPML (BPMI.org; deprecated)
-* JBPM3
-* XPDL
-* BORM
-* YAWL
-* PNML (Woped tool)
-* SEAM; covers data + processes
-
-#### Requirements
+## Requirements
 
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
@@ -62,7 +45,7 @@
 * allows easy application of methods for automatical search for (sub)optimal input coefficient ranges, i.e. constraint optimization problems (e.g. simulated annealing)
 * modeling tool and mainly generated binaries are clean for antivirus programs (ask for exception in Symantec, AVG, etc.?)
 
-#### UI auto-generation
+## UI auto-generation
 
 * constraint defined UI (including accessibility measures for visually impaired etc.)
 * each collection/bigger_item could have an icon (derived from the name of the item or the content of the collection recursively)
@@ -76,7 +59,7 @@
 * long-living widgets (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
 * inspiration in W3.CSS design templates (W3.CSS is framework in pure CSS)
 
-#### Platforms
+## Platforms
 
 Assuming Redis will be used as storage (https://muut.com/blog/technology/redis-as-primary-datastore-wtf.html , http://oldblog.antirez.com/post/redis-persistence-demystified.html ). Make sure the underlying filesystem forces the HW standard (e.g. SATA) to use/flush write barriers, because it's often broken in HDDs and additionally filesystems do not enforce it.
 
@@ -88,23 +71,23 @@ FIXME propagation of "stored" info back to the requester
 
 FIXME high performance data flow
 
-##### Desktop:Windows 10
+### Desktop:Windows 10
 
 * https://github.com/MSOpenTech/redis
     * `fork()` implementation?
 
-##### Desktop:Mac OS X
+### Desktop:Mac OS X
 
-##### Desktop:Ubuntu
+### Desktop:Ubuntu
 
-##### Mobile:Android
+### Mobile:Android
 
 * is it required to use JNI or can we embed C code more easily?
 * `fork()` works, but might be a bit tricky with Java VM APPS (e.g. due to excess memory demands - use overcommit?); see also `posix_spawn()` (https://github.com/axiak/java_posix_spawn ) `vfork()` `clone()`
 * use only generic widgets with auto-placement
 * `embed redis java`
 
-##### Mobile:iOS
+### Mobile:iOS
 
 * `fork()` not available => prepare (imitate) copy on write pthread fork just with threads; see also `pthread_create()`
     * `fork()` implementation in Cygwin
@@ -113,7 +96,9 @@ FIXME high performance data flow
     * [redislite](https://redislite.readthedocs.io/en/latest/ ) (Python "embedded" Redis)
 * allow sharding among threaded instances instead of among process instances
 
-#### Existing tools
+## Existing stuff
+
+### Tools
 
 * http://www.workflowpatterns.com/vendors/
 * WebRation software comprises nearly everything needed:
@@ -131,13 +116,24 @@ FIXME high performance data flow
 * GeneXus Evolution 3 and GeneXus Business Process Management Suite (http://www.genexus.com/products/business-process-management-suite?en ) - quite nice and comprehensive IS generators with native and Web outputs for M$ Windows, Android and BlackBerry
 * WaveMaker - open source web RAD with semi-auto GUI generation (http://www.jguru.com/article/tools/wavemaker-brings-rad-to-the-cloud-with-one-click-deployment.html )
 
-#### Function points
+### Languages
 
-TODO auto-generated to estimate usual cost and time
+* http://en.wikipedia.org/wiki/Dataflow_programming (must be useful also for ad-hoc DB querying - e.g. using unix-utils-inspired functions)
+* BPEL4WS (IBM + M$ + BEA); exe lang for BPMN
+* WCSI (Sun)
+* WSFL (IBM)
+* XLANG (M$)
+* WSDL (??)
+* BPMN 2.0; covers control, data (very loosely), authorization, exception
+* BPML (BPMI.org; deprecated)
+* JBPM3
+* XPDL
+* BORM
+* YAWL
+* PNML (Woped tool)
+* SEAM; covers data + processes
 
-* should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
-
-#### Misc
+## Misc
 
 * backend DB
     * [Mnesia](http://erlang.org/doc/man/mnesia.html ) - a distributed telecommunications DBMS (leverages Erlang)
@@ -174,7 +170,7 @@ TODO auto-generated to estimate usual cost and time
 * register intellectual property at [EUIPO](https://euipo.europa.eu/ohimportal/cs/home )
 * auto submit hashes of releases to codehash.db to improve security
 
-#### References to papers...
+## References to papers...
 
 * a shift from the application development to the application integration (assembling vs. programming) (Dumas et al. 2005)
 * Process Aware Information Systems (PAIS): "software system that manages and executes operational processes involving people, applications, and/or information sources on the basis of process models" (Dumas et al. 2005)
@@ -184,20 +180,24 @@ TODO auto-generated to estimate usual cost and time
 * The view-based approach to dynamic inter-organizational workflow cooperation (Issam Chebbi, Schahram Dustdar and Samir Tata, 2006) - nice & short descriptions of the "process" languages
 * The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation; http://www.cs.washington.edu/research/constraints/cassowary/cassowary-tr.pdf (JS, C++, Java, SmallTalk implementations: http://www.badros.com/greg/cassowary/js/quaddemo.html)
 
-#### Sales
+## Sales
 
 * multiple service variants
     * the cheapest will not use diplomatic messages (and thus say straight why are things as they are as it will favour leaf workers over managers in terms of the mainstream perception)
         * e.g. if the customer decides to have just the default not-so-awesome looking UI, then it will appear in built-in FAQs as "your manager <name|role> bought just the cheap variant with bad UI"
         * this option to show honest (non-diplomatic) messages might be mitigated by increasing the price by 0.5*price_of_highly_customized_UI
 * optional audit capabilities (who logged where and when and what approximately has been used)
+* Function points
+    * auto-generated to estimate usual cost and time
+    * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
 
-#### Community
+
+## Community
 
 * conferences
 * meetups
 
-#### Testing (use-cases, advertisement, marketing)
+## Testing (use-cases, advertisement, marketing)
 
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
 * there might be a code for service/script tasks allowing running pure excel models converted to C using https://github.com/tamc/excel_to_code
