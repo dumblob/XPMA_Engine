@@ -56,10 +56,11 @@
 * a general way how to "jump" to predefined locations or e.g. "recently viewed" in GUI
 * a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
     * rule No. 1: all errors are **recoverable** (by humans)
-* each "widget" remembers last used value on a per widget instance basis and offers this value along with the default value (**with the same importance** - preferably next to each other)
-* web front-end maybe made by http://www.portadesign.cz/en/proc-nas-vybrat
-* combo-like widgets will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
-* long-living widgets (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
+* each "widget" remembers last used value on a per "widget" instance basis and offers this value along with the default value (**with the same importance** - preferably next to each other)
+* web front-end maybe designed by http://www.portadesign.cz/en/proc-nas-vybrat
+* combo-like "widgets" will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
+* long-living "widgets" (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
+* each "widget" must support a "diff" feature (new + old value) to cope with real-time changes
 * inspiration in W3.CSS design templates (W3.CSS is framework in pure CSS)
 
 ## Platforms
