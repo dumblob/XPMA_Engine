@@ -1,0 +1,75 @@
+#!/usr/bin/env dao
+
+# FIXME simulations of min throughput, avg throughput, and max latency of
+#     this solution and consequent optimization
+
+# XPMA data streams implementation
+#
+# Features:
+#   backpressure (each processor fully controls its own outbuf, which is
+#       independent from inbuf of the consecutive processor)
+#   zero latency (outbuf is made available as inbuf to the consequent
+#       processor even if only partially filled; this is the case when
+#       the processor does not have enough input data to process)
+#   tickless/timeoutless/time_independent/delay_independent processing
+#   persistent ("replayable" after failure) inbuf and outbuf (note,
+#       inbuf and outbuf of all activated processors must guarantee
+#       persistency all the time, so we have to pass every single
+#       item from every single buffer through Redis - inbuf and outbuf
+#       are anyway Redis structures - we can't just use plain ASM jmp
+#       instructions, plain mutexes, plain condition variables,
+#       plain yield in coroutines or plain message passing/sending)
+
+# Data flow through processors (making up to a data stream)
+#
+#         +-------++-----------++--------+
+#     --->| inbuf || processor || outbuf |---+
+#         |   1   ||     1     ||    1   |   |
+#         +-------++-----------++--------+   |
+#                                            |
+#     +--------------------------------------+
+#     |
+#     |   +-------++-----------++--------+
+#     +-->| inbuf || processor || outbuf |---+
+#         |   2   ||     2     ||    2   |   |
+#         +-------++-----------++--------+   |
+#                                            |
+#     +--------------------------------------+
+#     |
+#     |   +-------++-----------++--------+
+#     +-->| inbuf || processor || outbuf |--->
+#         |   3   ||     3     ||    3   |
+#         +-------++-----------++--------+
+#
+# A processor (with its inbuf and outbuf) represents one and only one
+# service/script task. Processors are partially wired at compile time,
+# but the final wiring and activation takes place first when the given
+# process instance reaches the service/script task.
+# Processors stay activated until the end of the process instance or until
+# a different path gets chosen (in case of loops).
+# Instead of activation/deactivation, waking_up/suspension with a complete
+# reset to defaults can be used to gain efficiency (reuse over construction).
+#
+# Inbuf and outbuf are FIFOs. Each pair of consecutive outbuf and inbuf (in
+# this order) in the chain is "swappable" (analogous to double buffering in
+# graphics).
+#
+# FSM driving each processor
+#
+#   state: inbuf   outbuf
+#   ----------------------
+#   fe:    full    empty    # can process? yes
+#   fp:    full    partial  # can process? yes
+#   pe:    partial empty    # can process? yes
+#   pp:    partial partial  # can process? yes
+#   ff:    full    full     # can process? no (waiting for the consumer)
+#   pf:    partial full     # can process? no (waiting for the consumer)
+#   ef:    empty   full     # can process? no (waiting for the consumer;
+#                           #                  there is a need to pass the
+#                           #                  inbuf to the producer)
+#   ep:    empty   partial  # can process? no (waiting for the producer;
+#                           #                  there is a need to pass the
+#                           #                  outbuf to the consumer)
+#   ee:    empty   empty    # can process? no (waiting for the producer;
+#                           #                  no need to pass anything to
+#                           #                  consumer)
