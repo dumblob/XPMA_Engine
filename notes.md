@@ -150,6 +150,7 @@ FIXME high performance data flow
 * NoFlo (syntax for the graph): http://noflojs.org/documentation/fbp/
 * enterprise architecture design (~ the top of the business process architecture); Remco Dijkman, Irene Vanderfeesten, Hajo A Reijers, *The road to a business process architecture: an overview of approaches and their use*, 2011
 * Identity Management, Access Management, and Single Sign-On (SSO) system
+    * GSI (Grid Security Infrastructure) shall be used after logging in
     * https://en.wikipedia.org/wiki/List_of_single_sign-on_implementations
     * [Auth0](https://github.com/auth0/lock ) (the core is not open-source; supports on-site deployment; major platforms supported)
     * Keycloak (Identity and Access Management for Modern Applications, Services and APIs, login service)
