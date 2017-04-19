@@ -205,6 +205,7 @@ FIXME high performance data flow
 
 ## Testing (use-cases, advertisement, marketing)
 
+* http://www.abclinuxu.cz/blog/vsichni_mame_radi_brozkwe/2017/4/cost-benefit-analyza-libreoffice-vs-ms-ofice-ve-firme (contact the guy and ask if he would be willing to cooperate - they would get a totally free customized IS and we some real experience with tiny businesses)
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
 * there might be a code for service/script tasks allowing running pure excel models converted to C using https://github.com/tamc/excel_to_code
 * HL7 medical XML schema (implemented e.g. by Iguana)
