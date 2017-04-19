@@ -19,8 +19,9 @@
 #       are anyway Redis structures - we can't just use plain ASM jmp
 #       instructions, plain mutexes, plain condition variables,
 #       plain yield in coroutines or plain message passing/sending)
-
-# Data flow through processors (making up to a data stream)
+#
+# Data flow through processors for the simplest case (a data flow
+#     makes up to a data stream)
 #
 #         +-------++-----------++--------+
 #     --->| inbuf || processor || outbuf |---+
@@ -44,15 +45,34 @@
 # A processor (with its inbuf and outbuf) represents one and only one
 # service/script task. Processors are partially wired at compile time,
 # but the final wiring and activation takes place first when the given
-# process instance reaches the service/script task.
+# process instance reaches the corresponding service/script task.
 # Processors stay activated until the end of the process instance or until
-# a different path gets chosen (in case of loops).
-# Instead of activation/deactivation, waking_up/suspension with a complete
+# a different path gets chosen (in case of loops). This is needed to avoid
+# starvation (the former path might go through a slow processor, but the
+# new path through a fast processor, but the whole system would wait for
+# the slow one).
+#
+# Instead of activation/deactivation, waking_up/suspension with an appropriate
 # reset to defaults can be used to gain efficiency (reuse over construction).
 #
 # Inbuf and outbuf are FIFOs. Each pair of consecutive outbuf and inbuf (in
 # this order) in the chain is "swappable" (analogous to double buffering in
 # graphics).
+#
+# Each processor can have multiple inbufs and outbufs. The set of all
+# inbufs of one processor is treated like one inbuf when it comes to the
+# FSM, but the "swapping" happens independently (in parallel) for each
+# inbuf in the set. The very same holds for outbufs.
+#
+# In case the XPM Engine processes each stream in parallel, FIFOs must not
+# block the thread (if any) in case the cache gets empty and thus is waiting
+# for data (i.e. thread being suspended and thus effectively stealing the
+# thread from the thread pool).
+#
+# Note, that a multi-producer, single-consumer lock-free queue (might be
+# a ring buffer - i.e. fixed size derived from, but not equal to, the
+# number of CPU cores) might be useful. Also a wait-free, i.e. real-time,
+# variant can be constructed from any lock-free structure.
 #
 # FSM driving each processor
 #
