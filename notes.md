@@ -57,7 +57,9 @@
 * a general way how to handle non-standard situations (a need to "get back" to previous screen in GUI or previous step in the process etc.)
     * rule No. 1: all errors are **recoverable** (by humans)
 * each "widget" remembers last used value on a per "widget" instance basis and offers this value along with the default value (**with the same importance** - preferably next to each other)
-* web front-end maybe designed by http://www.portadesign.cz/en/proc-nas-vybrat
+* web front-end design maybe in cooperation with
+    * http://www.portadesign.cz/en/proc-nas-vybrat
+    * http://www.arsyline.cz/
 * combo-like "widgets" will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
 * long-living "widgets" (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
 * each "widget" must support a "diff" feature (new + old value) to cope with real-time changes
@@ -205,6 +207,7 @@ FIXME high performance data flow
 
 ## Testing (use-cases, advertisement, marketing)
 
+* products/services of http://www.u-sluno.eu/
 * http://www.abclinuxu.cz/blog/vsichni_mame_radi_brozkwe/2017/4/cost-benefit-analyza-libreoffice-vs-ms-ofice-ve-firme (contact the guy and ask if he would be willing to cooperate - they would get a totally free customized IS and we some real experience with tiny businesses)
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
 * there might be a code for service/script tasks allowing running pure excel models converted to C using https://github.com/tamc/excel_to_code
