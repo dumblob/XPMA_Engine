@@ -1,5 +1,6 @@
 ## Requirements
 
+* fully automated user manual generation
 * upgradability to a new auto-generated version (i.e. hold references to old fields/values and act accordingly - try to mimic their behavior according to their class/type/group)
 * upgrade would also allow automatic (but optional) usage of old and new values (schemas) at the same time for a certain period (e.g. across multiple upgrades) maybe a possible solution: define a temporary BPMN graph
 * continuous integration (i.e. real-time UI generation for presentation...)
