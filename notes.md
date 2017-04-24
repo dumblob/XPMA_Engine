@@ -208,6 +208,7 @@ FIXME high performance data flow
 
 ## Testing (use-cases, advertisement, marketing)
 
+* process: a ticket offer with read-only overview at the end
 * products/services of http://www.u-sluno.eu/
 * http://www.abclinuxu.cz/blog/vsichni_mame_radi_brozkwe/2017/4/cost-benefit-analyza-libreoffice-vs-ms-ofice-ve-firme (contact the guy and ask if he would be willing to cooperate - they would get a totally free customized IS and we some real experience with tiny businesses)
 * if user input is expected, warn before (unintentional) closing/... as it would cancel the transaction/process/...
