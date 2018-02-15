@@ -1,5 +1,7 @@
 #!/usr/bin/env dao
 
+# FIXME DoS attacks (e.g. one hyperactive peer)
+
 # FIXME simulations of min throughput, avg throughput, and max latency of
 #     this solution and consequent optimization
 
@@ -20,8 +22,8 @@
 #       instructions, plain mutexes, plain condition variables,
 #       plain yield in coroutines or plain message passing/sending)
 #
-# Data flow through processors for the simplest case (a data flow
-#     makes up to a data stream)
+# Data flow through processors for the simplest case (
+#   no persistency, only one process running)
 #
 #         +-------++-----------++--------+
 #     --->| inbuf || processor || outbuf |---+
@@ -41,6 +43,61 @@
 #     +-->| inbuf || processor || outbuf |--->
 #         |   3   ||     3     ||    3   |
 #         +-------++-----------++--------+
+#
+# Data flow through processors with persistency (
+#   but only one process running)
+#
+#                                            +--------------------------------+
+#                                            |                                |
+#                                            |       persistent storage       |
+#                                            |                                |
+#                                            |  +---------------------------+ |
+#     +---------------------------------------------                        | |
+#     |                                      |  +---------------------------+ |
+#     |   +-------++-----------++--------+   |  +---------------------------+ |
+#     +-->| inbuf || processor || outbuf |---------+                        | |
+#         |   1   ||     1     ||    1   |   |  |  |                        | |
+#         +-------++-----------++--------+   |  |  |                        | |
+#                                            |  |  |                        | |
+#     +--------------------------------------------+                        | |
+#     |                                      |  +---------------------------+ |
+#     |   +-------++-----------++--------+   |  +---------------------------+ |
+#     +-->| inbuf || processor || outbuf |---------+                        | |
+#         |   2   ||     2     ||    2   |   |  |  |                        | |
+#         +-------++-----------++--------+   |  |  |                        | |
+#                                            |  |  |                        | |
+#     +--------------------------------------------+                        | |
+#     |                                      |  +---------------------------+ |
+#     |   +-------++-----------++--------+   |  +---------------------------+ |
+#     +-->| inbuf || processor || outbuf |--------->                        | |
+#         |   3   ||     3     ||    3   |   |  +---------------------------+ |
+#         +-------++-----------++--------+   |                                |
+#                                            |                                |
+#                                            +--------------------------------+
+#
+# +---------------------------------------------------------------------------+
+# |                                                                           |
+# |                                                                           |
+# |                                                                           |
+# |                                                                           |
+# |                                                                           |
+# |                                                                           |
+# |  +-----------+                                                            |
+# |  |           |                                                            |
+# |  |           |                                                            |
+# |  +-----------+                                                            |
+# |     |                                                                     |
+# |     v                                                                     |
+# |  +-----+-----+                                                            |
+# |  | in  | out |                                                            |
+# +--+-   -+-   -+------------------------------------------------------------+
+#    | processor |
+#    |     1     |
+#    +-----------+
+#
+#
+#
+# Note, a data flow makes up to a data stream.
 #
 # A processor (with its inbuf and outbuf) represents one and only one
 # service/script task. Processors are partially wired at compile time,

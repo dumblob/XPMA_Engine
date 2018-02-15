@@ -1,3 +1,22 @@
+## Minimal Viable Product (MVP)
+
+Platform | Standalone single-worker app<sup>1</sup> | Client app | Server app<sup>2</sup>
+:---|:---:|:---:|:---:
+Web (HTML5) | no | yes (only GUI) | no
+Android Lollipop+ | yes | yes (only GUI) | no
+iOS 9+ | yes | yes (only GUI) | no
+Windows Server 2008, 2008 R2, 2012, 2012 R2, 2016 | yes | yes (GUI) | yes
+Windows 7, 8, 8.1, 10 | yes | yes (only GUI) | yes
+Mac OS X 10.10+ | yes | yes (only GUI and TUI) | yes
+Linux | yes | yes (only X11R7.7 and TUI VT100) | yes
+
+*Matrix of platforms and features supported by systems produced by the [XPMA Engine](https://github.com/dumblob/XPMA_Engine )*
+
+FIXME change "client" apps only for "offline" dependencies, but otherwise do not automatically download the newest version
+
+<sup>1</sup>A standalone fully client-side application without any server.
+<sup>2</sup>The server application is optionally automatically divided into separate non-uniform instances interconnected as one cluster to minimize the RAM requirements of instances. The cluster might be geographically scattered and supports migration of running instances between nodes. Each part of the cluster optionally employs high availability - either among two or more nodes for one instance (i.e. geographically colocated; this is recommended) or among currently running nodes where other instances already run (i.e. geographically scattered). Nodes can be synchronized using the Hashgraph or Raft algorithm. An alternative to Redis built-in clustering might be [xcodis](https://github.com/siddontang/xcodis ) (for pure Redis, not a modified version).
+
 ## Requirements
 
 * fully automated user manual generation
@@ -64,6 +83,7 @@
 * combo-like "widgets" will scroll to the beginning (or end) if the currently selected item is only 3rd or less from the beginning (or end respectively)
 * long-living "widgets" (e.g. apps, logos, headers, footers) in case they're used in two manual tasks in one process by the same role and no other role changed them in between
 * each "widget" must support a "diff" feature (new + old value) to cope with real-time changes
+* the table "widget" must support filtering, sorting, import and export to Excel-compatible CSV
 * inspiration in W3.CSS design templates (W3.CSS is framework in pure CSS)
 
 ## Platforms
@@ -196,10 +216,11 @@ FIXME high performance data flow
         * e.g. if the customer decides to have just the default not-so-awesome looking UI, then it will appear in built-in FAQs as "your manager <name|role> bought just the cheap variant with bad UI"
         * this option to show honest (non-diplomatic) messages might be mitigated by increasing the price by 0.5*price_of_highly_customized_UI
 * optional audit capabilities (who logged where and when and what approximately has been used)
+* GDPR (General Data Protection Regulation) is "automatically" obeyed as a byproduct
+* save management resources and cut time to market by factor 10 (no more need to outsource development of internal systems - if your current in-house developers will be even needed, then just for a very few minutes)
 * Function points
     * auto-generated to estimate usual cost and time
     * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
-
 
 ## Community
 
