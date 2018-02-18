@@ -218,6 +218,7 @@ FIXME high performance data flow
 * optional audit capabilities (who logged where and when and what approximately has been used)
 * GDPR (General Data Protection Regulation) is "automatically" obeyed as a byproduct
 * save management resources and cut time to market by factor 10 (no more need to outsource development of internal systems - if your current in-house developers will be even needed, then just for a very few minutes)
+* you want to develop your own IS? avoid development issues (e.g. http://www.abclinuxu.cz/blog/Max_Devaine/2018/2/vyvoj-v-c-plus-oracle-odp.net-plus-entityframework ) completely by using the XPMA platform
 * Function points
     * auto-generated to estimate usual cost and time
     * should we add time-estimates to significant places in the model? (in order to better understand the complexity/priority_for_users and designate the future problematic places)
