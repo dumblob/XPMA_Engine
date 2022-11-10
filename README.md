@@ -1,3 +1,11 @@
+# TODO
+
+- use https://github.com/Jittor/jittor for fast fitness computation?
+- maybe do not build own workflow system, but just use
+    - Ryven 3.x (it can be simply tailored to BPMN + DMN)
+    - https://airflow.apache.org/use-cases/
+- maybe buy https://www.astronomer.io/product
+
 # XPMA (eXtensive Process Modelling and Automation)
 
 *Exchange tedious work for computer force!*
@@ -37,6 +45,7 @@ technical remarks:
 * multiplatform (both the tool and the resulting system)
 * auto-generation of "remote interfaces" (REST, RPC, message busses, etc.) for everything including also service/system/... introspection and following e.g. the [JSend specification](http://labs.omniti.com/labs/jsend)
     * shall support authentication and authorization - both using credentials and unique hash "link" or similar
+        - maybe outsource the whole authentication to Cognito (supports Facebook, Google, Twitter, ...)
 * orders of magnitude simpler than existing systems (mentioned in "arguments")
 * backend-agnostic and frontend-agnostic (there'll be modules offering these specifics)
 * scalability - the resulting systems will not use "engine", but will be stand-alone distributed and parallelized applications
@@ -54,7 +63,7 @@ general examples:
 
 Expected time for development in one person (full-time): 2 years for a very basic version. 3 years more for advanced modules, pre-prepared processes, connectors etc.
 
-## THE LONG STORY (a marketing description)
+## THE LONG STORY (aka marketing description)
 
 In the following lines, we're describing an idea for a thesis and/or future development and especially practical deployment.
 
@@ -75,4 +84,5 @@ We want to address all the issues imposed by the current approach. This is the t
 Properties will include remote interface auto generation (with authentication, of course) and will employ an approach "everything automated with occasional human intervention" rather than the current "humans do everything with a small number of exceptions for specific semi-automated subtasks" - our goal is to avoid human labour. If this goal sounds weird, then look at the best nature-friendly economy models available. It's pleasant to realize, that if the mankind used all the currently existing technology used in production on proper places, each adult would need to work less than 2 hours per day in a workweek. Begin with The Zeitgeist Movement and resource-based economy model.
 
 ## Authors
-* [Jan Pacner](https://www.linkedin.com/in/pacnerjan)
+
+* Efficient Management Society ([Pacner](https://www.linkedin.com/in/pacnerjan) and co)

@@ -1,6 +1,19 @@
 #!/usr/bin/env dao
 
+# FIXME generic & fast streaming algorithms
+#   https://github.com/alecmocatta/streaming_algorithms
+
+# FIXME Redis 5 has the best data structure of all times - "Stream"s
+#   http://antirez.com/news/128
+
+# theory: http://www.jonathanbeard.io/blog/2015/09/19/streaming-and-dataflow.html
+
+# use JSON API for serialization of all (!) messages including any data of any size
+#   https://jsonapi.org/format/#document-structure
+
 # FIXME DoS attacks (e.g. one hyperactive peer)
+
+# FIXME 2-way backpressure in JS: https://github.com/pull-stream/pull-stream
 
 # FIXME simulations of min throughput, avg throughput, and max latency of
 #     this solution and consequent optimization
@@ -150,3 +163,261 @@
 #   ee:    empty   empty    # can process? no (waiting for the producer;
 #                           #                  no need to pass anything to
 #                           #                  consumer)
+
+
+
+
+
+
+
+
+
+
+
+# FIXME look at single-producer-single-consumer (SPSC) ring buffer with
+#   performance nearly equal to memcpy: http://daugaard.org/blog/writing-a-fast-and-versatile-spsc-ring-buffer--performance-results/
+#   and try to implement it in Nim with the same performance
+
+// Copyright 2018 Kaspar Daugaard. For educational purposes only.
+// See http://daugaard.org/blog/writing-a-fast-and-versatile-spsc-ring-buffer
+
+#include <atomic>
+#include <algorithm>
+
+#ifndef FORCE_INLINE
+#   if defined(_MSC_VER)
+#       define FORCE_INLINE __forceinline
+#   elif defined(__GNUC__)
+#       define FORCE_INLINE inline __attribute__ ((always_inline))
+#   else
+#       define FORCE_INLINE inline
+#   endif
+#endif
+
+#define CACHE_LINE_SIZE 64
+
+class RingBuffer
+{
+  public:
+  // Allocate buffer space for writing.
+  FORCE_INLINE void* PrepareWrite(size_t size, size_t alignment);
+
+  // Publish written data.
+  FORCE_INLINE void FinishWrite();
+
+  // Write an element to the buffer.
+  template <typename T>
+  FORCE_INLINE void Write(const T& value)
+  {
+    void* dest = PrepareWrite(sizeof(T), alignof(T));
+    new(dest) T(value);
+  }
+
+  // Write an array of elements to the buffer.
+  template <typename T>
+  FORCE_INLINE void WriteArray(const T* values, size_t count)
+  {
+    void* dest = PrepareWrite(sizeof(T) * count, alignof(T));
+    for (size_t i = 0; i < count; i++)
+    new(static_cast<T*>(dest) + i) T(values[i]);
+  }
+
+  // Get read pointer. Size and alignment should match written data.
+  FORCE_INLINE void* PrepareRead(size_t size, size_t alignment);
+
+  // Finish and make buffer space available to writer.
+  FORCE_INLINE void FinishRead();
+
+  // Read an element from the buffer.
+  template <typename T>
+  FORCE_INLINE const T& Read()
+  {
+    void* src = PrepareRead(sizeof(T), alignof(T));
+    return *static_cast<T*>(src);
+  }
+
+  // Read an array of elements from the buffer.
+  template <typename T>
+  FORCE_INLINE const T* ReadArray(size_t count)
+  {
+    void* src = PrepareRead(sizeof(T) * count, alignof(T));
+    return static_cast<T*>(src);
+  }
+
+  // Initialize. Buffer must have required alignment. Size must be a power of two.
+  void Initialize(void* buffer, size_t size)
+  {
+    Reset();
+    m_Reader.buffer = m_Writer.buffer = static_cast<char*>(buffer);
+    m_Reader.size = m_Writer.size = m_Writer.end = size;
+  }
+
+  void Reset()
+  {
+    m_Reader = m_Writer = LocalState();
+    m_ReaderShared.pos = m_WriterShared.pos = 0;
+  }
+
+  private:
+    FORCE_INLINE static size_t Align(size_t pos, size_t alignment)
+  {
+    #ifdef RINGBUFFER_DO_NOT_ALIGN
+    alignment = 1;
+    #endif
+    return (pos + alignment - 1) & ~(alignment - 1);
+  }
+
+  FORCE_INLINE void GetBufferSpaceToWriteTo(size_t& pos, size_t& end);
+  FORCE_INLINE void GetBufferSpaceToReadFrom(size_t& pos, size_t& end);
+
+  // Writer and reader's local state.
+  struct alignas(CACHE_LINE_SIZE) LocalState
+  {
+    LocalState() : buffer(nullptr), pos(0), end(0), base(0), size(0) {}
+
+    char* buffer;
+    size_t pos;
+    size_t end;
+    size_t base;
+    size_t size;
+  };
+
+  LocalState m_Writer;
+  LocalState m_Reader;
+
+  // Writer and reader's shared positions.
+  struct alignas(CACHE_LINE_SIZE) SharedState
+  {
+    std::atomic<size_t> pos;
+  };
+
+  SharedState m_WriterShared;
+  SharedState m_ReaderShared;
+}
+
+void* RingBuffer::PrepareWrite(size_t size, size_t alignment)
+{
+  size_t pos = Align(m_Writer.pos, alignment);
+  size_t end = pos + size;
+  if (end > m_Writer.end)
+    GetBufferSpaceToWriteTo(pos, end);
+  m_Writer.pos = end;
+  return m_Writer.buffer + pos;
+}
+
+void RingBuffer::FinishWrite()
+{
+  m_WriterShared.pos.store(m_Writer.base + m_Writer.pos, std::memory_order_release);
+}
+
+void* RingBuffer::PrepareRead(size_t size, size_t alignment)
+{
+  size_t pos = Align(m_Reader.pos, alignment);
+  size_t end = pos + size;
+  if (end > m_Reader.end)
+    GetBufferSpaceToReadFrom(pos, end);
+  m_Reader.pos = end;
+  return m_Reader.buffer + pos;
+}
+
+void RingBuffer::FinishRead()
+{
+  m_ReaderShared.pos.store(m_Reader.base + m_Reader.pos, std::memory_order_release);
+}
+
+void RingBuffer::GetBufferSpaceToWriteTo(size_t& pos, size_t& end)
+{
+  if (end > m_Writer.size)
+  {
+    end -= pos;
+    pos = 0;
+    m_Writer.base += m_Writer.size;
+  }
+  for (;;)
+  {
+    size_t readerPos = m_ReaderShared.pos.load(std::memory_order_acquire);
+    size_t available = readerPos - m_Writer.base + m_Writer.size;
+    // Signed comparison (available can be negative)
+    if (static_cast<ptrdiff_t>(available) >= static_cast<ptrdiff_t>(end))
+      {
+        m_Writer.end = std::min(available, m_Writer.size);
+        break;
+      }
+  }
+}
+
+void RingBuffer::GetBufferSpaceToReadFrom(size_t& pos, size_t& end)
+{
+  if (end > m_Reader.size)
+  {
+    end -= pos;
+    pos = 0;
+    m_Reader.base += m_Reader.size;
+  }
+  for (;;)
+  {
+    size_t writerPos = m_WriterShared.pos.load(std::memory_order_acquire);
+    size_t available = writerPos - m_Reader.base;
+    // Signed comparison (available can be negative)
+    if (static_cast<ptrdiff_t>(available) >= static_cast<ptrdiff_t>(end))
+      {
+        m_Reader.end = std::min(available, m_Reader.size);
+        break;
+      }
+  }
+}
+
+
+# log-ledger implemented as Redis streams "deliver at least once" (not
+#     "exactly once" as it would be too inefficient)
+#   https://brandur.org/redis-streams#streamer
+
+def run_once
+  num_streamed = 0
+
+  # Need at least repeatable read isolation level so that our DELETE after
+  # enqueueing will see the same records as the original SELECT.
+  DB.transaction(isolation_level: :repeatable_read) do
+    records = StagedLogRecord.order(:id).limit(BATCH_SIZE)
+
+    unless records.empty?
+      RDB.multi do
+        records.each do |record|
+          stream(record.data)
+          num_streamed += 1
+
+          $stdout.puts "Enqueued record: #{record.action} #{record.object}"
+        end
+      end
+
+      StagedLogRecord.where(Sequel.lit("id <= ?", records.last.id)).delete
+    end
+  end
+
+  num_streamed
+end
+
+#
+# private
+#
+
+# Number of records to try to stream on each batch.
+BATCH_SIZE = 1000
+private_constant :BATCH_SIZE
+
+private def stream(data)
+  # XADD mystream MAXLEN ~ 10000  * data <JSON-encoded blob>
+  #
+  # MAXLEN ~ 10000 caps the stream at roughly that number (the "~" trades
+  # precision for speed) so that it doesn't grow in a purely unbounded way.
+  RDB.xadd(STREAM_NAME,
+    "MAXLEN", "~", STREAM_MAXLEN,
+    "*", "data", JSON.generate(data))
+end
+
+# Redis streams trucation
+#   https://brandur.org/redis-streams#truncation
+
+Unlike a queue, consumers don’t remove records from a log, and without management it would be in danger of growing in an unbounded way. In the example above, the streamer uses the MAXLEN argument to XADD to tell Redis that the stream should have a maximum length. The tilde (~) operator is an optimization that indicates to Redis that the stream should be truncated to approximately the specified length when it’s possible to remove an entire node. This is significantly faster than trying to prune it to an exact number.
+
+This rough truncation will work well in most of the time, but lack of safety measures means that it’s possible that records might be removed which have not yet been read by a consumer that’s fallen way behind. A more resilient system should track the progress of each consumer and only truncate records that are no longer needed by any of them.
